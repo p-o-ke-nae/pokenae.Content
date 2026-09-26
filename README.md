@@ -25,7 +25,7 @@ docker compose run --rm validate
 ## 更新フロー
 
 1. `content/<slug>-<timestamp>` 形式のブランチを作る。
-2. 記事・設定と、対応する `content/updates/<change-id>.json` を同じ PR に含める。
+2. 記事・設定と、対応する `content/updates/<change-id>.json` を同じ PR に含める。INFO に表示しない変更は、PR 本文に `Content-Update: skip` と `Content-Update-Reason: <reason>` を記載する。
 3. INFO に載せない軽微な変更は PR 本文へ `Content-Update: skip` と理由を記載する。
 4. CI 成功後にレビューを受け、`main` へマージする。
 
