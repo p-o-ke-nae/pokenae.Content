@@ -7,7 +7,7 @@
   "scripts": {
     "validate": "node scripts/validate.mjs",
     "validate:pr": "node scripts/validate-pr.mjs",
-    "test": "node --test scripts/validate-pr.test.mjs",
+    "test": "node --test scripts/validate-pr.test.mjs scripts/post-schema.test.mjs",
     "check": "npm run validate && npm test"
   },
   "engines": {
