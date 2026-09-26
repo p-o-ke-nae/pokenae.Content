@@ -32,7 +32,7 @@ showInPickup: false
 
 今回の大本命であるタイプ：ヌル，ベベノム，サトシのピカチュウを対象に行いました．
 
-![画像](./images/pasted-muivbjbo-16j2p.webp)
+![画像](./images/pasted-muivfz2d-2in8c.webp)
 
 ## 捕獲乱数
 
