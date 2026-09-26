@@ -1,21 +1,19 @@
 ---
-slug: gen4-national-pokedex
-title: 第四世代全国図鑑埋め
-summary: 第四世代の全国図鑑493件を地方、収集状態、ボックス位置とともに確認できるショーケースです。
-publishedAt: '2024-03-14T11:14:22Z'
-updatedAt: '2024-03-14T11:14:22Z'
-status: published
-category: showcase
+slug: "gen4-national-pokedex"
+title: "第四世代全国図鑑埋め"
+summary: "第四世代の全国図鑑493件を地方、収集状態、ボックス位置とともに確認できるショーケースです。"
+publishedAt: "2024-03-14T11:14:22Z"
+updatedAt: "2024-03-14T11:14:22Z"
+status: "published"
+category: "showcase"
 tags: []
 relatedTags: []
 priority: 90
-thumbnail: ./images/pokemon-home-icon-1.png
-legacyUrl: 'https://ozaroom.com/showcase/25.html'
-changeNote: 旧ショーケース25と図鑑XLSXを記事・JSONへ移行
-showInPickup: true
-embed:
-  component: CollectionDex
-  data: ./collection-dex.json
+thumbnail: "./images/pokemon-home-icon-1.png"
+legacyUrl: "https://ozaroom.com/showcase/25.html"
+changeNote: "旧ショーケース25と図鑑XLSXを記事・JSONへ移行"
+showInPickup: false
+embed: {"component":"CollectionDex","data":"./collection-dex.json"}
 ---
 
 クリックまたはキーボード操作で各ポケモンの情報を確認できます。
