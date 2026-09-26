@@ -31,6 +31,7 @@ showInPickup: false
 ## 瞬き乱数
 
 今回の大本命であるタイプ：ヌル，ベベノム，サトシのピカチュウを対象に行いました．
+
 ![画像](./images/pasted-muivbjbo-16j2p.webp)
 
 ## 捕獲乱数
