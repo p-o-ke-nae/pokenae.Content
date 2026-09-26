@@ -8,10 +8,10 @@ status: "published"
 category: "showcase"
 tags: []
 relatedTags: []
-priority: 90
+priority: 0
 thumbnail: "./images/pokemon-home-icon-1.png"
 legacyUrl: "https://ozaroom.com/showcase/25.html"
-changeNote: "旧ショーケース25と図鑑XLSXを記事・JSONへ移行"
+changeNote: ""
 showInPickup: false
 embed: {"component":"CollectionDex","data":"./collection-dex.json"}
 ---
