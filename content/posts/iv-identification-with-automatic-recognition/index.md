@@ -2,21 +2,15 @@
 slug: iv-identification-with-automatic-recognition
 title: 自動認識対応個体値特定ツールでポケモンの個体値を判定する
 summary: 野生ポケモンを倒して経験値を得ながら、自動認識対応ツールで個体値を特定する手順を紹介します。
-publishedAt: "2024-03-24T11:04:43Z"
-updatedAt: "2024-03-24T11:04:43Z"
+publishedAt: '2024-03-24T11:04:43Z'
+updatedAt: '2024-03-24T11:04:43Z'
 status: published
 category: blog
-tags:
-  - pokemon
-  - individual-values
-  - recognition
-  - tool
-relatedTags:
-  - automation
-  - rta
+tags: []
+relatedTags: []
 priority: 80
-thumbnail: "./images/ivtool32-1.png"
-legacyUrl: "https://ozaroom.com/tool/32.html"
+thumbnail: ./images/ivtool32-1.png
+legacyUrl: 'https://ozaroom.com/tool/32.html'
 changeNote: 旧サイトのブログ32をMarkdownへ移行
 showInPickup: true
 ---
