@@ -11,7 +11,7 @@ relatedTags: []
 priority: 0
 thumbnail: "./images/pokemon-home-icon-1.png"
 legacyUrl: "https://ozaroom.com/showcase/25.html"
-changeNote: ""
+changeNote: "第四世代全国図鑑埋めを更新しました"
 showInPickup: false
 embed: {"component":"CollectionDex","data":"./collection-dex.json"}
 ---
