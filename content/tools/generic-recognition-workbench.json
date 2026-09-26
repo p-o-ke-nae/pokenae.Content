@@ -1,0 +1,19 @@
+{
+  "slug": "generic-recognition-workbench",
+  "displayName": "GenericRecognitionWorkbench",
+  "summary": "画像認識ワークフローをアプリケーションへ組み込むための .NET ライブラリです。",
+  "kind": "library",
+  "repository": "p-o-ke-nae/GenericRecognitionWorkbench",
+  "docs": {
+    "readme": "README.md",
+    "paths": ["docs/", ".github/skills/"]
+  },
+  "release": {
+    "channel": "stable",
+    "manifestRequired": false,
+    "package": "GenericRecognitionWorkbench"
+  },
+  "showInPickup": true,
+  "priority": 90
+}
+

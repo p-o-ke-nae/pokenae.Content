@@ -1,0 +1,14 @@
+{
+  "items": [
+    {"label": "ツール開発室", "href": "/tools"},
+    {"label": "Webアプリ", "href": "/apps"},
+    {"label": "ブログ", "href": "/blog"},
+    {"label": "お問い合わせ", "href": "/contact"}
+  ],
+  "social": [
+    {"service": "X", "label": "@p_o_ke_nae", "href": "https://x.com/p_o_ke_nae"},
+    {"service": "Discord", "label": "Pokémon Past Generation", "href": "https://scrapbox.io/PokemonPRNGDiscord/"},
+    {"service": "GitHub", "label": "p-o-ke-nae", "href": "https://github.com/p-o-ke-nae"}
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "slug": "blink-observer-tool",
+  "displayName": "BlinkObserverTool",
+  "summary": "映像から対象の瞬きを観測する Windows デスクトップアプリです。",
+  "kind": "windows-app",
+  "repository": "p-o-ke-nae/BlinkObserverTool",
+  "docs": {
+    "readme": "README.md",
+    "paths": ["docs/"]
+  },
+  "release": {
+    "channel": "stable",
+    "manifestRequired": true,
+    "unsignedInstaller": true
+  },
+  "supportedOs": ["Windows 10 x64", "Windows 11 x64"],
+  "showInPickup": true,
+  "priority": 100
+}
+
