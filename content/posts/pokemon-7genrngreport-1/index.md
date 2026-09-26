@@ -6,7 +6,7 @@ publishedAt: "2026-09-27T00:00:00Z"
 updatedAt: "2026-09-27T00:00:00Z"
 status: "published"
 category: "blog"
-tags: ["ポケモン","乱数調整","色違い"]
+tags: ["0001","0002","0003"]
 relatedTags: []
 priority: 0
 thumbnail: "https://raw.githubusercontent.com/p-o-ke-nae/pokenae.Content/77caf2198f01bf8f5464f3a7c29fcb45ffe984c9/content/posts/pokemon-7genrngreport-1/images/pasted-muikfd75-3e4wi.webp"
