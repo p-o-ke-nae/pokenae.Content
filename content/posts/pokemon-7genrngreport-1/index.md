@@ -1,17 +1,16 @@
 ---
-slug: pokemon-7genrngreport-1
-title: 第7世代USUM乱数調整に挑戦してみた
-summary: 第7世代USUM乱数調整に挑戦してみた感想
-publishedAt: '2026-09-27T00:00:00Z'
-updatedAt: '2026-09-27T00:00:00Z'
-status: draft
-category: blog
-tags: []
+slug: "pokemon-7genrngreport-1"
+title: "第7世代USUM乱数調整に挑戦してみた"
+summary: "第7世代USUM乱数調整に挑戦してみた感想"
+publishedAt: "2026-09-27T00:00:00Z"
+updatedAt: "2026-09-27T00:00:00Z"
+status: "published"
+category: "blog"
+tags: ["0001","0002","0003"]
 relatedTags: []
 priority: 0
-thumbnail: ./images/pasted-muikfd75-3e4wi.webp
-legacyUrl: null
-changeNote: 第7世代USUM乱数調整に挑戦してみたを追加
+thumbnail: "./images/pasted-muikfd75-3e4wi.webp"
+changeNote: "第7世代USUM乱数調整に挑戦してみたを追加"
 showInPickup: false
 ---
 
@@ -32,6 +31,8 @@ showInPickup: false
 ## 瞬き乱数
 
 今回の大本命であるタイプ：ヌル，ベベノム，サトシのピカチュウを対象に行いました．
+
+![画像](./images/pasted-muivfz2d-2in8c.webp)
 
 ## 捕獲乱数
 
