@@ -46,3 +46,6 @@ Read and write**、**Metadata: Read-only** のみにしてください。Webhook
 取得不能または権利を確認できない素材は代替画像を作らず
 `reports/image-migration.json` の生成結果で確認します。
 
+記事の `legacyUrl` は移行元ページが存在する場合だけ指定する任意項目です。
+記事画像は `content/posts/<slug>/images/` に配置し、frontmatter と Markdown
+からは `./images/<file>` の相対パスで参照します。外部画像 URL は利用できません。
