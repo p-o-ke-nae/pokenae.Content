@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokenae.com/schemas/post.schema.json",
+  "title": "Pokenae post frontmatter",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "title", "summary", "publishedAt", "updatedAt", "status", "category", "tags", "relatedTags", "priority", "thumbnail", "legacyUrl", "changeNote", "showInPickup"],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "title": {"type": "string", "minLength": 1, "maxLength": 120},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 240},
+    "publishedAt": {"type": "string", "format": "date-time"},
+    "updatedAt": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["draft", "published", "archived"]},
+    "category": {"enum": ["blog", "showcase", "news"]},
+    "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+    "relatedTags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+    "priority": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "thumbnail": {"type": ["string", "null"]},
+    "legacyUrl": {"type": ["string", "null"], "format": "uri"},
+    "changeNote": {"type": "string", "minLength": 1, "maxLength": 200},
+    "showInPickup": {"type": "boolean"},
+    "embed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["component", "data"],
+      "properties": {
+        "component": {"const": "CollectionDex"},
+        "data": {"type": "string", "pattern": "^\\./[a-z0-9._/-]+\\.json$"}
+      }
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+services:
+  validate:
+    build: .
+    volumes:
+      - .:/workspace
+      - content_node_modules:/workspace/node_modules
+    command: npm run check
+
+volumes:
+  content_node_modules:
+

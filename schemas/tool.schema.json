@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokenae.com/schemas/tool.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "displayName", "summary", "kind", "repository", "docs", "release", "showInPickup", "priority"],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "displayName": {"type": "string", "minLength": 1},
+    "summary": {"type": "string", "minLength": 1},
+    "kind": {"enum": ["windows-app", "library"]},
+    "repository": {"type": "string", "pattern": "^p-o-ke-nae/[A-Za-z0-9._-]+$"},
+    "docs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["readme", "paths"],
+      "properties": {
+        "readme": {"type": "string"},
+        "paths": {"type": "array", "uniqueItems": true, "items": {"type": "string"}}
+      }
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["channel", "manifestRequired"],
+      "properties": {
+        "channel": {"enum": ["stable"]},
+        "manifestRequired": {"type": "boolean"},
+        "package": {"type": "string"},
+        "unsignedInstaller": {"type": "boolean"}
+      }
+    },
+    "supportedOs": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "showInPickup": {"type": "boolean"},
+    "priority": {"type": "integer", "minimum": 0, "maximum": 1000}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"kind": {"const": "windows-app"}}},
+      "then": {
+        "required": ["supportedOs"],
+        "properties": {
+          "release": {
+            "type": "object",
+            "properties": {"manifestRequired": {"const": true}}
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"kind": {"const": "library"}}},
+      "then": {
+        "properties": {
+          "release": {
+            "type": "object",
+            "properties": {"manifestRequired": {"const": false}}
+          }
+        }
+      }
+    }
+  ]
+}

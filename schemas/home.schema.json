@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokenae.com/schemas/home.schema.json",
+  "oneOf": [
+    {
+      "title": "Banners",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "image", "alt", "href", "startsAt", "endsAt", "order"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "image": {"type": "string"},
+          "alt": {"type": "string", "minLength": 1},
+          "href": {"type": "string"},
+          "startsAt": {"type": "string", "format": "date-time"},
+          "endsAt": {"type": ["string", "null"], "format": "date-time"},
+          "order": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    {
+      "title": "Announcements",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "text", "href", "variant", "startsAt", "endsAt"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "text": {"type": "string", "minLength": 1},
+          "href": {"type": "string"},
+          "variant": {"enum": ["normal", "emphasis", "urgent"]},
+          "startsAt": {"type": "string", "format": "date-time"},
+          "endsAt": {"type": ["string", "null"], "format": "date-time"}
+        }
+      }
+    }
+  ]
+}
+

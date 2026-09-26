@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokenae.com/schemas/update.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "publishedAt", "target", "summary", "href", "visible"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "publishedAt": {"type": "string", "format": "date-time"},
+    "target": {"enum": ["post", "tool", "home", "navigation"]},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 200},
+    "href": {"type": "string"},
+    "visible": {"type": "boolean"}
+  }
+}

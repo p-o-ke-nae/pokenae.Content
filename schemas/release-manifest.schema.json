@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokenae.com/schemas/release-manifest.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "tag", "product", "architecture", "minimumWindowsVersion", "installer", "sha256", "publishedAt", "releaseUrl"],
+  "properties": {
+    "version": {"type": "string", "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"},
+    "tag": {"type": "string", "pattern": "^v(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)$"},
+    "product": {"type": "string", "minLength": 1},
+    "architecture": {"enum": ["x64"]},
+    "minimumWindowsVersion": {"type": "string", "minLength": 1},
+    "installer": {"type": "string", "pattern": "\\.msi$"},
+    "sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "publishedAt": {"type": "string", "format": "date-time"},
+    "releaseUrl": {"type": "string", "format": "uri"}
+  }
+}
+

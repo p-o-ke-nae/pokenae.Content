@@ -1,0 +1,22 @@
+{
+  "name": "@pokenae/content",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Public content source for pokenae.com",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "validate:pr": "node scripts/validate-pr.mjs",
+    "test": "node --test scripts/validate-pr.test.mjs",
+    "check": "npm run validate && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "gray-matter": "4.0.3",
+    "markdownlint": "0.38.0"
+  }
+}
