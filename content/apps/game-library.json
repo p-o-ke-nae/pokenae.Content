@@ -1,0 +1,12 @@
+{
+  "slug": "game-library",
+  "displayName": "ゲームライブラリ",
+  "summary": "ゲーム、ハード、セーブデータを管理します。既存URLはそのまま利用できます。",
+  "metaLabel": "Google アカウント対応",
+  "image": "/mock/thumb3.svg",
+  "imageAlt": "",
+  "href": "/game-library",
+  "status": "published",
+  "order": 1,
+  "tags": ["000001"]
+}

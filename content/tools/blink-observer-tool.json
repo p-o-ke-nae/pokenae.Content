@@ -14,7 +14,7 @@
     "unsignedInstaller": true
   },
   "supportedOs": ["Windows 10 x64", "Windows 11 x64"],
+  "tags": ["000001", "000002"],
   "showInPickup": true,
   "priority": 100
 }
-

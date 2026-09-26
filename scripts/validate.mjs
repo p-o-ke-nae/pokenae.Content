@@ -32,6 +32,7 @@ addFormats(ajv);
 const schemas = {
   post: readJson("schemas/post.schema.json"),
   tool: readJson("schemas/tool.schema.json"),
+  app: readJson("schemas/app.schema.json"),
   home: readJson("schemas/home.schema.json"),
   update: readJson("schemas/update.schema.json")
 };
@@ -48,7 +49,30 @@ const validate = (kind, data, file) => {
   }
 };
 
-const tags = new Set(readJson("fixtures/tags.json"));
+const tagIds = readJson("fixtures/tags.json");
+const tags = new Set(tagIds);
+const tagLabels = readJson("fixtures/tag-labels.json");
+if (tags.size !== tagIds.length) {
+  errors.push("fixtures/tags.json: duplicate tag ID");
+}
+for (const tag of tagIds) {
+  if (!/^(?!000000)[0-9]{6}$/.test(tag)) {
+    errors.push(`fixtures/tags.json: invalid tag ID ${tag}`);
+  }
+  if (!(tag in tagLabels)) {
+    errors.push(`fixtures/tag-labels.json: missing label for ${tag}`);
+  }
+}
+for (const tag of Object.keys(tagLabels)) {
+  if (!tags.has(tag)) {
+    errors.push(`fixtures/tag-labels.json: unknown tag ID ${tag}`);
+  }
+}
+const validateTags = (data, file) => {
+  for (const tag of [...(data.tags ?? []), ...(data.relatedTags ?? [])]) {
+    if (!tags.has(tag)) errors.push(`${relative(file)}: unknown tag ${tag}`);
+  }
+};
 const postFiles = walk(path.join(root, "content", "posts"), (file) =>
   file.endsWith(`${path.sep}index.md`)
 );
@@ -74,9 +98,7 @@ for (const file of postFiles) {
   ) {
     errors.push(`${relative(file)}: updatedAt precedes publishedAt`);
   }
-  for (const tag of [...(parsed.data.tags ?? []), ...(parsed.data.relatedTags ?? [])]) {
-    if (!tags.has(tag)) errors.push(`${relative(file)}: unknown tag ${tag}`);
-  }
+  validateTags(parsed.data, file);
   if (parsed.data.thumbnail) {
     const image = path.resolve(path.dirname(file), parsed.data.thumbnail);
     if (!fs.existsSync(image)) {
@@ -131,7 +153,17 @@ for (const issue of lintResult.toString().split("\n").filter(Boolean)) {
 }
 
 for (const file of walk(path.join(root, "content", "tools"), (f) => f.endsWith(".json"))) {
-  validate("tool", JSON.parse(fs.readFileSync(file, "utf8")), file);
+  const data = JSON.parse(fs.readFileSync(file, "utf8"));
+  validate("tool", data, file);
+  validateTags(data, file);
+}
+for (const file of walk(path.join(root, "content", "apps"), (f) => f.endsWith(".json"))) {
+  const data = JSON.parse(fs.readFileSync(file, "utf8"));
+  validate("app", data, file);
+  validateTags(data, file);
+  if (data.slug !== path.basename(file, ".json")) {
+    errors.push(`${relative(file)}: slug must match filename`);
+  }
 }
 for (const file of ["content/home/banners.json", "content/home/announcements.json"]) {
   const data = readJson(file);
@@ -183,5 +215,5 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(
-  `Validated ${postFiles.length} posts, ${slugs.size} unique slugs, schemas, Markdown, links, images, dates, and tags.`
+  `Validated ${postFiles.length} posts, ${slugs.size} unique slugs, schemas, apps, Markdown, links, images, dates, and tags.`
 );

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pokenae.com/schemas/app.schema.json",
+  "title": "Pokenae web application",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["slug", "displayName", "summary", "metaLabel", "image", "imageAlt", "href", "status", "order", "tags"],
+  "properties": {
+    "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "displayName": {"type": "string", "minLength": 1, "maxLength": 120},
+    "summary": {"type": "string", "minLength": 1, "maxLength": 240},
+    "metaLabel": {"type": "string", "minLength": 1, "maxLength": 120},
+    "image": {"type": ["string", "null"]},
+    "imageAlt": {"type": "string"},
+    "href": {"type": "string", "pattern": "^/[a-z0-9]+(?:-[a-z0-9]+)*(?:/[a-z0-9]+(?:-[a-z0-9]+)*)*$"},
+    "status": {"enum": ["draft", "published", "archived"]},
+    "order": {"type": "integer", "minimum": 0, "maximum": 1000},
+    "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^(?!000000)[0-9]{6}$"}}
+  }
+}

@@ -6,7 +6,7 @@ publishedAt: "2026-09-27T00:00:00Z"
 updatedAt: "2026-09-27T00:00:00Z"
 status: "published"
 category: "blog"
-tags: ["0001","0002","0003"]
+tags: ["000001","000002","000003"]
 relatedTags: []
 priority: 0
 thumbnail: "./images/pasted-muikfd75-3e4wi.webp"

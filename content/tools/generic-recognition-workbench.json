@@ -13,7 +13,7 @@
     "manifestRequired": false,
     "package": "GenericRecognitionWorkbench"
   },
+  "tags": [],
   "showInPickup": true,
   "priority": 90
 }
-

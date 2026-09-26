@@ -1,0 +1,8 @@
+{
+  "id": "apps-and-tag-ids-20260927",
+  "publishedAt": "2026-09-27T06:55:30.147+09:00",
+  "target": "app",
+  "summary": "Webアプリ情報を正本化し、タグIDを6桁へ統一しました。",
+  "href": "/apps",
+  "visible": false
+}

@@ -1,6 +1,6 @@
 # pokenae.Content
 
-`pokenae.com` が公開する記事、ホーム画面設定、ツール情報、更新履歴の正本です。
+`pokenae.com` が公開する記事、Webアプリ、ホーム画面設定、ツール情報、更新履歴の正本です。
 公開サイトは既定ブランチ `main` のみを読み込み、作業ブランチは管理画面の
 プレビュー用途に限定します。
 
@@ -8,6 +8,7 @@
 
 - `content/posts/<slug>/index.md`: 記事と同一ディレクトリの画像
 - `content/tools/*.json`: ツール掲載情報
+- `content/apps/*.json`: Webアプリ掲載情報（公開URL、表示情報、公開状態、並び順、タグ）
 - `content/home/*.json`: バナー、告知、SNS
 - `content/updates/*.json`: INFO に表示する公開変更履歴
 - `schemas/*.schema.json`: 公開データ契約
@@ -21,6 +22,21 @@ docker compose run --rm validate
 ```
 
 ローカル Node.js を使う場合は `npm ci && npm run check` です。
+
+## タグ ID
+
+タグ ID は `000001` から `999999` までの6桁数字です。`000000` は利用できません。
+定義は `fixtures/tags.json`、表示名は `fixtures/tag-labels.json` を正本とし、
+記事の `tags` / `relatedTags`、ツールとWebアプリの `tags` は定義済みIDだけを参照します。
+
+旧4桁IDからの移行は既定で dry-run です。差分要約を確認後、`--write` で反映します。
+入力不正、重複、未定義参照、移行後の旧4桁残存時は非ゼロ終了します。
+6桁化済みの状態でも安全に再実行できます。
+
+```powershell
+docker compose run --rm validate npm run migrate:tag-ids
+docker compose run --rm validate npm run migrate:tag-ids -- --write
+```
 
 ## 更新フロー
 

@@ -3,7 +3,7 @@
   "$id": "https://pokenae.com/schemas/tool.schema.json",
   "type": "object",
   "additionalProperties": false,
-  "required": ["slug", "displayName", "summary", "kind", "repository", "docs", "release", "showInPickup", "priority"],
+  "required": ["slug", "displayName", "summary", "kind", "repository", "docs", "release", "tags", "showInPickup", "priority"],
   "properties": {
     "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
     "displayName": {"type": "string", "minLength": 1},
@@ -31,6 +31,7 @@
       }
     },
     "supportedOs": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "tags": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^(?!000000)[0-9]{6}$"}},
     "showInPickup": {"type": "boolean"},
     "priority": {"type": "integer", "minimum": 0, "maximum": 1000}
   },

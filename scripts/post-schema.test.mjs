@@ -40,3 +40,9 @@ test("changeNote is optional but validated when present", () => {
   assert.equal(validate(withoutChangeNote), true);
   assert.equal(validate({ ...withoutChangeNote, changeNote: "" }), false);
 });
+
+test("tag IDs are six digits and exclude zero", () => {
+  assert.equal(validate({ ...post, tags: ["000001"], relatedTags: ["999999"] }), true);
+  assert.equal(validate({ ...post, tags: ["0001"] }), false);
+  assert.equal(validate({ ...post, tags: ["000000"] }), false);
+});
