@@ -5,7 +5,7 @@ summary: "第7世代USUM乱数調整に挑戦してみた感想"
 publishedAt: "2026-09-27"
 status: "draft"
 category: "blog"
-tags: ["ポケモン","乱数調整"]
+tags: ["ポケモン","乱数調整","色違い"]
 relatedTags: []
 priority: 0
 changeNote: "第7世代USUM乱数調整に挑戦してみたを追加"
