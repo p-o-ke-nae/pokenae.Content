@@ -9,7 +9,7 @@ category: "blog"
 tags: ["0001","0002","0003"]
 relatedTags: []
 priority: 0
-thumbnail: "https://raw.githubusercontent.com/p-o-ke-nae/pokenae.Content/77caf2198f01bf8f5464f3a7c29fcb45ffe984c9/content/posts/pokemon-7genrngreport-1/images/pasted-muikfd75-3e4wi.webp"
+thumbnail: "./images/pasted-muikfd75-3e4wi.webp"
 changeNote: "第7世代USUM乱数調整に挑戦してみたを追加"
 showInPickup: false
 ---
@@ -22,7 +22,7 @@ showInPickup: false
 ウルトラワープライドで出会えるポケモンを対象に行いました．
 まずはマッシブーンから始めました．
 
-![画像](https://raw.githubusercontent.com/p-o-ke-nae/pokenae.Content/77caf2198f01bf8f5464f3a7c29fcb45ffe984c9/content/posts/pokemon-7genrngreport-1/images/pasted-muikfd75-3e4wi.webp)
+![画像](./images/pasted-muikfd75-3e4wi.webp)
 
 ## 野生乱数
 
