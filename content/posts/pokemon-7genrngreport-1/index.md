@@ -2,16 +2,16 @@
 slug: pokemon-7genrngreport-1
 title: 第7世代USUM乱数調整に挑戦してみた
 summary: 第7世代USUM乱数調整に挑戦してみた感想
-publishedAt: "2026-09-27T00:00:00Z"
-updatedAt: "2026-09-27T00:00:00Z"
-status: "draft"
-category: "blog"
-tags: [pokemon, rta]
+publishedAt: '2026-09-27T00:00:00Z'
+updatedAt: '2026-09-27T00:00:00Z'
+status: draft
+category: blog
+tags: []
 relatedTags: []
 priority: 0
-thumbnail: "./images/pasted-muikfd75-3e4wi.webp"
+thumbnail: ./images/pasted-muikfd75-3e4wi.webp
 legacyUrl: null
-changeNote: "第7世代USUM乱数調整に挑戦してみたを追加"
+changeNote: 第7世代USUM乱数調整に挑戦してみたを追加
 showInPickup: false
 ---
 
