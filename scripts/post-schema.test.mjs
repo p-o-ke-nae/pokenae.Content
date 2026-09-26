@@ -34,3 +34,9 @@ test("legacyUrl is optional but validated when present", () => {
   assert.equal(validate({ ...post, legacyUrl: "https://example.com/old-post" }), true);
   assert.equal(validate({ ...post, legacyUrl: "not a URL" }), false);
 });
+
+test("changeNote is optional but validated when present", () => {
+  const { changeNote, ...withoutChangeNote } = post;
+  assert.equal(validate(withoutChangeNote), true);
+  assert.equal(validate({ ...withoutChangeNote, changeNote: "" }), false);
+});
