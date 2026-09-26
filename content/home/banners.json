@@ -4,9 +4,15 @@
     "image": "../posts/iv-identification-with-automatic-recognition/images/ivtool32-1.png",
     "alt": "個体値特定ツールの基礎ポイント表",
     "href": "/blog/iv-identification-with-automatic-recognition",
+    "order": 10,
     "startsAt": "2024-03-24T11:04:43Z",
-    "endsAt": null,
-    "order": 10
+    "endsAt": null
+  },
+  {
+    "id": "welcome2",
+    "image": "/mock/slide1.svg",
+    "alt": "pokenae ポケモン攻略ツール集2",
+    "href": "/tools",
+    "order": 2
   }
 ]
-
