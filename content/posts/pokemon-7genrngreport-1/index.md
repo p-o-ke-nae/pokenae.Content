@@ -2,8 +2,7 @@
 slug: "pokemon-7genrngreport-1"
 title: "第7世代USUM乱数調整に挑戦してみた"
 summary: "第7世代USUM乱数調整に挑戦してみた感想"
-publishedAt: "2026-09-28"
-updatedAt: "2026-09-27T00:00:00Z"
+publishedAt: "2026-09-28T00:00:00+09:00"
 status: "published"
 category: "blog"
 tags: ["000001","000002","000003"]
