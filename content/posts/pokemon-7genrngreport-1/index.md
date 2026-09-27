@@ -11,6 +11,7 @@ priority: 0
 thumbnail: "./images/pasted-muikfd75-3e4wi.webp"
 changeNote: "第7世代USUM乱数調整に挑戦してみたを更新しました"
 showInPickup: false
+updatedAt: "2026-09-28T00:00:00+09:00"
 ---
 
 ポケモンバンクのサービス終了が確定し，慌ててUSUMの乱数調整に初挑戦しました．
