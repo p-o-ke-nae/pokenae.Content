@@ -2,8 +2,7 @@
 slug: "pokemon-7genrngreport-1"
 title: "第7世代USUM乱数調整に挑戦してみた"
 summary: "第7世代USUM乱数調整に挑戦してみた感想"
-publishedAt: "2026-09-27T00:00:00Z"
-updatedAt: "2026-09-27T00:00:00Z"
+publishedAt: "2026-09-28T00:00:00+09:00"
 status: "published"
 category: "blog"
 tags: ["000001","000002","000003"]
@@ -12,6 +11,7 @@ priority: 0
 thumbnail: "./images/pasted-muikfd75-3e4wi.webp"
 changeNote: "第7世代USUM乱数調整に挑戦してみたを更新しました"
 showInPickup: false
+updatedAt: "2026-09-28T00:00:00+09:00"
 ---
 
 ポケモンバンクのサービス終了が確定し，慌ててUSUMの乱数調整に初挑戦しました．
@@ -35,6 +35,10 @@ showInPickup: false
 今回の大本命であるタイプ：ヌル，ベベノム，サトシのピカチュウを対象に行いました．
 
 ![画像](./images/pasted-muivfz2d-2in8c.webp)
+
+瞬きの観測があまりにも苦手な上タイミング合わせも難しかったので，画像認識してshiftキーを送信するツールを作成し，観測作業を自動化しました．
+
+[瞬きを観測するツール](https://pokenae.com/tools/blink-observer-tool)
 
 ### 捕獲乱数
 
