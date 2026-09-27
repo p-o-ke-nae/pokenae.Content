@@ -1,11 +1,11 @@
 [
   {
-    "id": "legacy-site-migration",
-    "image": "../posts/iv-identification-with-automatic-recognition/images/ivtool32-1.png",
-    "alt": "個体値特定ツールの基礎ポイント表",
-    "href": "/blog/iv-identification-with-automatic-recognition",
-    "order": 9,
-    "startsAt": "2024-03-24T11:04:00.000Z",
+    "id": "typenull",
+    "image": "./images/typenull-709cf5a0083e.webp",
+    "alt": "7世代乱数調整挑戦中",
+    "href": "/blog/pokemon-7genrngreport-1",
+    "order": 1,
+    "startsAt": "2026-09-26T15:00:00.000Z",
     "endsAt": null
   },
   {
