@@ -2,11 +2,13 @@
   "slug": "game-library",
   "displayName": "ゲームライブラリ",
   "summary": "ゲーム、ハード、セーブデータを管理します。既存URLはそのまま利用できます。",
-  "metaLabel": "Google アカウント対応",
+  "href": "/game-library",
   "image": "./images/pokenaeLogo.png",
   "imageAlt": "",
-  "href": "/game-library",
-  "status": "published",
+  "metaLabel": "Google アカウント対応",
+  "status": "draft",
   "order": 1,
-  "tags": ["000001"]
+  "tags": [
+    "000001"
+  ]
 }
