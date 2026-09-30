@@ -4,5 +4,5 @@
   "target": "app",
   "summary": "Webアプリを管理画面から更新",
   "href": "/apps",
-  "visible": true
+  "visible": false
 }
